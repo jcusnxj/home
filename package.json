@@ -1,0 +1,23 @@
+{
+  "name": "mywebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "running": "node scripts/running.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-navigation": "^1.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "dotenv": "^16.4.7",
+    "googleapis": "^148.0.0",
+    "luxon": "^3.5.0"
+  }
+}

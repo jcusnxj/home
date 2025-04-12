@@ -1,0 +1,36 @@
+<table class="table-overview">
+    <tr>
+        <th>{{ dictionary[lang].weekText}}</th>
+        <th>Km</th>
+        <th>{{ dictionary[lang].paceText}}</th>
+        <th>Avg HR</th>
+        <th>{{ dictionary[lang].hillsText}}</th>
+        <th class="hidden-stuff">{{ dictionary[lang].durationText}}</th>
+      </tr>
+      <tr class="unit-cell">
+        <td>#</td>
+        <td>km</td>
+        <td>min/km</td>
+        <td>bpm</td>
+        <td>m</td>
+        <td class="hidden-stuff">hh:mm:ss</td>
+      </tr>
+      {% for item in weekly | reverse %}
+      <tr class="data-cell">
+        {% if item.id %}
+        {% if lang == "en" %}
+        <td><a href="/{{ lang }}/{{ item.id }}/">{{ item.Week }}</a></td>
+        {% else %}
+        <td><a href="/{{ lang }}/{{ 20 + item.id }}/">{{ item.Week }}</a></td>
+        {% endif %}
+        {% else %}
+        <td>{{ item.Week }}</td>
+        {% endif %}
+        <td>{{ item.Distance }}</td>
+        <td>{{ item.Pace }}</td>
+        <td>{{ item.AvgHR }}</td>
+        <td>{{ item.Ascent }}</td>
+        <td class="hidden-stuff">{{ item.Duration }}</td>
+      </tr>
+      {% endfor %}
+    </table>
