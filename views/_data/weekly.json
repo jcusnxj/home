@@ -11,7 +11,7 @@
     "Calories": "276",
     "Weight": "83.0",
     "BodyFat": "31.1",
-    "id": "250401"
+    "id": "250331"
   },
   {
     "Week": "15",
@@ -25,6 +25,20 @@
     "Calories": "662",
     "Weight": "83.1",
     "BodyFat": "31.2",
+    "id": "250407"
+  },
+  {
+    "Week": "16",
+    "Date": "2025-04-14",
+    "Distance": "5.2",
+    "Duration": "00:35:18",
+    "Pace": "06:48",
+    "AvgHR": "158",
+    "Ascent": "54",
+    "Cadence": "158",
+    "Calories": "413",
+    "Weight": "82.5",
+    "BodyFat": "30.8",
     "id": null
   }
 ]

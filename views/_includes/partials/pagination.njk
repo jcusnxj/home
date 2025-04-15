@@ -1,14 +1,14 @@
-{% set previousPost = collections.post | getPreviousCollectionItem(page) %}
-{% set nextPost = collections.post | getNextCollectionItem(page) %}
+{% set previousPost = collections["log_" + lang ] | getPreviousCollectionItem(page) %}
+{% set nextPost = collections["log_" + lang ] | getNextCollectionItem(page) %}
 
   <div class="pagination">
   {% if previousPost %}
-  <a href="{{ previousPost.url }}">Předchozí</a>
+  <a href="{{ previousPost.url }}">{{ dictionary[lang].previousPostText}}</a>
   {% else %}
   <span></span> <!-- Placeholder for spacing -->
   {% endif %}
 
   {% if nextPost %}
-  <a href="{{ nextPost.url }}">Další</a>
+  <a href="{{ nextPost.url }}">{{ dictionary[lang].nextPostText}}</a>
   {% endif %}
 </div>
